@@ -5,16 +5,19 @@
 <hibernate-configuration>
 
     <session-factory>
-        <property name="hibernate.dialect">org.hibernate.dialect.MariaDB103Dialect</property>               <!-- org.hibernate.dialect.PostgreSQL10Dialect -->
-        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>             <!-- org.postgresql.Driver -->
-        <property name="hibernate.connection.url">jdbc:mariadb://127.0.0.1:3306/company_db</property>      <!-- jdbc:postgresql://localhost:5432/hibapp_db -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MariaDB103Dialect</property>
+        <property name="hibernate.connection.driver_class">org.mariadb.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mariadb://127.0.0.1:3306/company_db</property>
         <property name="hibernate.connection.username">company</property>
         <property name="hibernate.connection.password">company</property>
 
         <property name="hibernate.current_session_context_class">thread</property>
         <property name="hbm2ddl.auto">update</property>
-        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.show_sql">true</property>
         <property name="hibernate.connection.autoReconnect">true</property>
+
+        <mapping class="com.hib.model.Country"/>
+
     </session-factory>
 
 </hibernate-configuration>
