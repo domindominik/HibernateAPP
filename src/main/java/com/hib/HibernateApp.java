@@ -23,7 +23,7 @@ public class HibernateApp
 
             for (Country country: countries)
             {
-                System.out.println(country.getCountryId() + "" + country.getCountryName());
+                System.out.println(country.getCountryId() + " " + country.getCountryName());
             }
         }
 
