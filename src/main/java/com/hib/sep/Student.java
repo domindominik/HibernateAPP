@@ -3,6 +3,7 @@ package com.hib.sep;
 import com.hib.sep.enums.Sex;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "students")
@@ -27,6 +28,9 @@ public class Student
 
     @Transient
     private String description;
+
+    @OneToMany(mappedBy = "student")
+    private List<Book> bookList;
 
     public Long getId() {
         return id;
@@ -74,5 +78,13 @@ public class Student
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public List<Book> getBookList() {
+        return bookList;
+    }
+
+    public void setBookList(List<Book> bookList) {
+        this.bookList = bookList;
     }
 }

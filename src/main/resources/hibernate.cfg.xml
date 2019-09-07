@@ -16,7 +16,9 @@
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.connection.autoReconnect">true</property>
 
-        <mapping class="com.hib.model.Country"/>
+        <!--<mapping class="com.hib.model.Country"/>-->
+        <mapping class="com.hib.sep.Student"/>
+        <mapping class="com.hib.sep.Book"/>
 
     </session-factory>
 
